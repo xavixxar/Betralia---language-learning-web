@@ -503,26 +503,6 @@ function displayStories() {
 
 
     // ======================================
-    // FILTRO DE NIVEL
-    // ======================================
-
-    const selectedLevel =
-        levelFilter.value;
-
-
-    if (selectedLevel !== "todos") {
-
-        filteredStories =
-            filteredStories.filter(story =>
-
-                story.level === selectedLevel
-
-            );
-
-    }
-
-
-    // ======================================
     // ORDENAR
     // ======================================
 
@@ -560,11 +540,39 @@ function displayStories() {
 
 
     // ======================================
+// HISTORIAS PARA LA PARTE DE ARRIBA
+// ======================================
+
+// Estas NO tienen filtro de nivel
+
+const topStories = [...filteredStories];
+
+
+// ======================================
+// HISTORIAS PARA LA PARTE DE ABAJO
+// ======================================
+
+let bottomStories = [...filteredStories];
+
+const selectedLevel =
+    levelFilter.value;
+
+
+if (selectedLevel !== "todos") {
+
+    bottomStories =
+        bottomStories.filter(story =>
+            story.level === selectedLevel
+        );
+
+}
+
+    // ======================================
     // POPULARES
     // ======================================
 
     const popular =
-        [...filteredStories]
+    [...topStories]
             .sort(
                 (a, b) =>
                     b.popularity -
@@ -587,7 +595,7 @@ function displayStories() {
     // ======================================
 
     const recent =
-        [...filteredStories]
+    [...topStories]
             .sort(
                 (a, b) =>
                     b.date -
