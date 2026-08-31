@@ -473,7 +473,7 @@ function displayStories() {
     else {
 
         filteredStories =
-            stories.filter(story =>
+            bottomStories.forEach(story =>
                 story.language === selectedLanguage
             );
 
@@ -491,7 +491,7 @@ function displayStories() {
     if (searchText !== "") {
 
         filteredStories =
-            filteredStories.filter(story =>
+            bottomStories.forEach(story => 
 
                 story.title
                     .toLowerCase()
@@ -617,7 +617,7 @@ if (selectedLevel !== "todos") {
     // TODAS
     // ======================================
 
-    filteredStories.forEach(story => {
+    bottomStories.forEach(story => {
 
         allStories.appendChild(
             createStoryCard(story)
