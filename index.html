@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Betralia</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="google-site-verification" content="OZsjOGOiQBonn5q1rLba1DoTWjoh6_oEysWtQLOmvy0" />
+    
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Betralia</h1>
+
+        <nav>
+            <a href="index.html">Stories</a>
+            <a href="Community.html">Community</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- SELECTOR DE IDIOMA -->
+
+        <section class="language-selector">
+
+            <h2>¿What language do you want to learn?</h2>
+            <h3>This web has</h3>
+
+<div class="site-stats">
+
+    <div class="stat">
+        <strong id="story-count">0</strong>
+        <span>Stories</span>
+    </div>
+
+    <div class="stat">
+        <strong id="language-count">0</strong>
+        <span>Active languages</span>
+    </div>
+
+</div>
+
+<select id="language"></select>
+
+
+        </section>
+
+
+        <!-- MÁS POPULARES -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>Most popular</h2>
+
+            </div>
+
+
+            <div class="stories" id="popular-stories">
+
+                <!-- Las historias aparecerán aquí mediante JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- MÁS RECIENTES -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>Most recent</h2>
+
+            </div>
+
+
+            <div class="stories" id="recent-stories">
+
+                <!-- Las historias aparecerán aquí mediante JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- TODAS LAS HISTORIAS -->
+
+        <section class="all-stories">
+
+            <div class="section-title">
+
+                <h2>All stories</h2>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search stories..."
+            >
+
+
+            <div class="filters">
+
+                <select id="level-filter">
+
+                    <option value="todos">All levels</option>
+
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+
+                </select>
+
+
+                <select id="sort">
+
+                    <option value="popular">
+                        Most popular
+                    </option>
+
+                    <option value="recent">
+                        Most recent
+                    </option>
+
+                    <option value="rating">
+                        Highest rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="stories" id="all-stories">
+
+                <!-- Todas las historias aparecerán aquí -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+
+    
+</body>
+
+</html>
+
+
+
