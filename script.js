@@ -473,7 +473,7 @@ function displayStories() {
     else {
 
         filteredStories =
-            bottomStories.forEach(story =>
+            stories.filter(story =>
                 story.language === selectedLanguage
             );
 
@@ -491,11 +491,31 @@ function displayStories() {
     if (searchText !== "") {
 
         filteredStories =
-            bottomStories.forEach(story => 
+            filteredStories.filter(story =>
 
                 story.title
                     .toLowerCase()
                     .includes(searchText)
+
+            );
+
+    }
+
+
+    // ======================================
+    // FILTRO DE NIVEL
+    // ======================================
+
+    const selectedLevel =
+        levelFilter.value;
+
+
+    if (selectedLevel !== "todos") {
+
+        filteredStories =
+            filteredStories.filter(story =>
+
+                story.level === selectedLevel
 
             );
 
@@ -540,39 +560,11 @@ function displayStories() {
 
 
     // ======================================
-// HISTORIAS PARA LA PARTE DE ARRIBA
-// ======================================
-
-// Estas NO tienen filtro de nivel
-
-const topStories = [...filteredStories];
-
-
-// ======================================
-// HISTORIAS PARA LA PARTE DE ABAJO
-// ======================================
-
-let bottomStories = [...filteredStories];
-
-const selectedLevel =
-    levelFilter.value;
-
-
-if (selectedLevel !== "todos") {
-
-    bottomStories =
-        bottomStories.filter(story =>
-            story.level === selectedLevel
-        );
-
-}
-
-    // ======================================
     // POPULARES
     // ======================================
 
     const popular =
-    [...topStories]
+        [...filteredStories]
             .sort(
                 (a, b) =>
                     b.popularity -
@@ -595,7 +587,7 @@ if (selectedLevel !== "todos") {
     // ======================================
 
     const recent =
-    [...topStories]
+        [...filteredStories]
             .sort(
                 (a, b) =>
                     b.date -
@@ -617,7 +609,7 @@ if (selectedLevel !== "todos") {
     // TODAS
     // ======================================
 
-    bottomStories.forEach(story => {
+    filteredStories.forEach(story => {
 
         allStories.appendChild(
             createStoryCard(story)
