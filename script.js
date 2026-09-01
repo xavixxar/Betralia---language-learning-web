@@ -66,6 +66,10 @@ const languages = [
     {
         id: "spanish",
         name: "Spanish"
+    },
+    {
+        id: "corsician",
+        name: "Corsician"
     }
 ];
 
@@ -209,7 +213,27 @@ const stories = [
         popularity: 100,
         date: 5,
         rating: 4.9
-    }
+    },
+
+    // --------------------------
+    // CORSICIAN
+    // --------------------------
+
+    {
+        id: "a-nostra-culazione",
+        title: "Our breakfast - A nostra culazione",
+        language: "corsician",
+        languageName: "Corsician",
+        flag: "🇮🇹",
+        level: "A1",
+        creator: "Xavier T.",
+        image: "Imagenes/historias desayuno.png",
+        link: "Historias/A nostra culazione.html",
+        popularity: 80,
+        date: 1,
+        rating: 4.7
+    },
+
 
 ];
 

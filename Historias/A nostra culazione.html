@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A nostra culazione</title>
+
+<link rel="stylesheet" href="../styles.css">
+
+
+</head>
+
+<body>
+
+
+<main class="story-page">
+
+
+    <!-- ============================== -->
+    <!-- TÍTULO -->
+    <!-- ============================== -->
+
+    <h1>A nostra culazione</h1>
+
+
+    <p class="story-info">
+        Corsician · A1
+    </p>
+
+
+    <hr>
+
+    
+    <!-- ============================== -->
+    <!-- HISTORIA -->
+    <!-- ============================== -->
+
+    <div class="story-text">
+
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="Goodmorning my love, how did you sleep?"
+            >
+               -Bonghjornu, amore meu. Cumu hai dormitu?
+            </span>
+
+        </p>
+
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="I slept well, thanks! And you?"
+            >
+                -Aghju dormitu bè, ti ringraziu. È tù?
+            </span>
+
+        </p>
+
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="Me too, thanks!"
+            >
+                -È eiu ancu, ti ringraziu.
+            </span>
+
+        </p>
+
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="What do we have for the breakfast?"
+            >
+              -Chì ci hè per culazione ?
+            </span>
+
+        </p>
+
+        <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="For breakfast today, we have eggs, tomato, sausages, and bacon."
+            >
+               -Per a culazione d'oghje, avemu ova, pumata, salsicce è pancetta.
+            </span>
+
+        </p>
+
+
+                <p class="sentence">
+
+            <span
+                class="word"
+                data-translation="That sounds delicious! Enjoy your meal."
+            >
+               -Pare deliziosu! Bon appetitu.
+            </span>
+
+        </p>
+
+    </div>
+
+
+    <!-- ============================== -->
+    <!-- VOLVER -->
+    <!-- ============================== -->
+
+    <a
+        href="../index.html"
+        class="back-button"
+    >
+        ← Return to stories
+    </a>
+
+
+</main>
+
+
+<!-- ============================== -->
+<!-- ID DE LA HISTORIA -->
+<!-- ============================== -->
+
+<script>
+
+    const STORY_ID = "el-meu-nou-imperi";
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../supabase.js"></script>
+
+<script src="../story.js"></script>
+
+
+<!-- ============================== -->
+<!-- TRADUCCIONES -->
+<!-- ============================== -->
+
+<script>
+
+    const words =
+        document.querySelectorAll(".word");
+
+
+    words.forEach(word => {
+
+        word.addEventListener("click", () => {
+
+
+            const translation =
+                word.dataset.translation;
+
+
+            const existingTranslation =
+                word.nextElementSibling;
+
+
+            // Si ya está abierta,
+            // la cerramos.
+
+            if (
+                existingTranslation &&
+                existingTranslation.classList.contains("translation")
+            ) {
+
+                existingTranslation.remove();
+
+                return;
+
+            }
+
+
+            // Crear traducción
+
+            const translationElement =
+                document.createElement("span");
+
+
+            translationElement.classList.add(
+                "translation"
+            );
+
+
+            translationElement.textContent =
+                translation;
+
+
+            // Mostrar traducción
+
+            word.after(
+                translationElement
+            );
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
