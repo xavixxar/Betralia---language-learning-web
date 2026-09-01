@@ -59,26 +59,6 @@ const languages = [
 // ==========================================
 
 const stories = [
-
-    // --------------------------
-    // ITALIAN
-    // --------------------------
-
-    {
-        id: "il-viaggio-di-anna",
-        title: "Anna's Travel - Il viaggio d'Anna.",
-        language: "italian",
-        languageName: "Italian",
-        flag: "🇮🇹",
-        level: "A1",
-        creator: "Xavier T.",
-        image: "",
-        link: "Historias/Il viaggio d'Anna.html",
-        popularity: 75,
-        date: 1,
-        rating: 4.7
-    },
-
     
     // --------------------------
     // CATALAN
