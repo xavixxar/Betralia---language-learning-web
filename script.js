@@ -38,12 +38,6 @@ const languages = [
         id: "english",
         name: "English"
     },
-
-    {
-        id: "italian",
-        name: "Italian"
-    },
-
     {
         id: "menorqui",
         name: "Menorquí (Catalan dialect)"
@@ -52,20 +46,6 @@ const languages = [
     {
         id: "normand",
         name: "Normand"
-    },
-
-    {
-        id: "portuguese",
-        name: "Portuguese"
-    },
-
-    {
-        id: "spanish",
-        name: "Spanish"
-    },
-    {
-        id: "spanish",
-        name: "Spanish"
     },
     {
         id: "corsician",
