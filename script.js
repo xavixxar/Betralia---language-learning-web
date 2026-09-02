@@ -161,8 +161,8 @@ const stories = [
     // --------------------------
 
     {
-        id: "pedro-geht-am-marik",
-        title: "Pedro goes to the market - Pedro geht am Märik",
+        id: "pedro-geht-uf-de-marik",
+        title: "Pedro goes to the market - Pedro geht ùf de Märik",
         language: "alsacian",
         languageName: "Alsacian",
         flag: "🇫🇷",
