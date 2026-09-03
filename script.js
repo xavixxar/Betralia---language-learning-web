@@ -33,11 +33,6 @@ const languages = [
         id: "catalan",
         name: "Catalan"
     },
-
-    {
-        id: "english",
-        name: "English"
-    },
     {
         id: "menorqui",
         name: "Menorquí (Catalan dialect)"
@@ -127,7 +122,7 @@ const stories = [
         languageName: "Normand",
         flag: "🇫🇷",
         level: "A1",
-        creator: "",
+        creator: "ed l'Epte a la Mer",
         image: "Imagenes/historia normando 1.png",
         link: "Historias/Pedro in the market Lechanteur.html",
         popularity: 97,
@@ -167,7 +162,7 @@ const stories = [
         languageName: "Alsacian",
         flag: "🇫🇷",
         level: "A1",
-        creator: "",
+        creator: "anonymous",
         image: "Imagenes/historia alsaciano 1.png",
         link: "Historias/Pedro in the market Alsacian.html",
         popularity: 100,
